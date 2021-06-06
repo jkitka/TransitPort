@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="hhtp://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transit Port Modeler</title>
+    <link href="site-style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<div align="center">
+
+    <h1>Car Record</h1>
+
+  <table border="1" cellpadding="10">
+      <!-- Table header -->
+      <thead>
+<tr>
+    <th>Id portu</th>
+    <th>Nazwa</th>
+    <th>Powierzchnia</th>
+    <th>Data Zalozenia</th>
+    <th>Osrodek ratownictwa</th>
+    <th>ID adresu</th>
+    <th>Akcje</th>
+  
+</tr>
+      </thead>
+
+<!-- Table body-->
+<tbody>
+  <tr th:each="car:${listPort}">
+      <td th:text="${car.ID_portu}">Id portu</td>
+      <td th:text="${car.Nazwa}">Nazwa</td>
+      <td th:text="${car.Powierzchnia}">Powierzchnia</td>
+      <td th:text="${car.Data_zalozenia}">Data Zalozenia</td>
+      <td th:text="${car.Osrodek_ratownictwa}">Osrodek ratownictwa</td>
+      <td th:text="${car.ID_adresu}">ID adresu</td>
+
+
+  </tr>
+
+  </tbody>
+
+
+
+  </table>
+
+    </div>
+
+    <footer align="center">
+        Port Bazodanowy, 2021
+    </footer>
+</body>
+</html>
