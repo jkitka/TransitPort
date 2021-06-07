@@ -44,6 +44,16 @@ nav a {
 #login {
     position: absolute;
     right: 1em;
+    margin-top: -5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: greenyellow;
+}
+
+h1 {
+    text-align: center;
 }
 
 footer {
