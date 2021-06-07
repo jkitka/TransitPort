@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="hhtp://www.thymeleaf.org">
+
+
+<head>
+<meta charset="UTF-8">
+<title>Edit Port</title>
+
+</head>
+<body>
+
+	<div align="center">
+		<!-- Page Header  -->
+		<h1>Edit port</h1>
+
+		<!--  End line / new line  -->
+		<br />
+
+		<form action="#" th:action="@{/update}" th:object="${port}"
+			method="post">
+
+			<!-- Table with records  -->
+			<table border="1" cellpadding="10">
+
+				<!-- Rows -->
+				<tr>
+					<td>ID portu:</td>
+					<td><input type="text" th:field="*{ID_portu}"
+						readonly="readonly"></td>
+				</tr>
+
+				<tr>
+					<td>Nazwa:</td>
+					<td><input type="text" th:field="*{Nazwa}"></td>
+				</tr>
+
+				<tr>
+					<td>Powierzchnia:</td>
+					<td><input type="text" th:field="*{Powierzchnia}"></td>
+				</tr>
+
+				<tr>
+					<td>Data zalozenia:</td>
+					<td><input type="text" th:field="*{Data_zalozenia}"></td>
+				</tr>
+
+				<tr>
+					<td>Osrodek ratownictwa</td>
+					<td><input type="text" th:field="*{Osrodek_ratownictwa}"></td>
+				</tr>
+
+				<tr>
+					<td>ID adresu:</td>
+					<td><input type="text" th:field="*{ID_adresu}"></td>
+				</tr>
+
+
+
+
+
+				<!-- Button Save -->
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+
+
+			</table>
+		</form>
+	</div>
+</body>
+</html>

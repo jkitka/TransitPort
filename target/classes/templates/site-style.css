@@ -1,0 +1,62 @@
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+a:link {
+    opacity: 100%;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+a:visited {
+    opacity: 100%;
+} 
+
+a:active {
+    opacity: 30%;
+}
+
+nav {
+    width: 100%;
+    background-color: blanchedalmond;
+    display: inline-block;
+    font-size: larger;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li {
+    display: inline;
+    margin-top: 20;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline;
+    padding: 0 1em 0 1em;
+    margin: 0;
+    text-align: right;
+    color: black;
+}
+
+#login {
+    position: absolute;
+    right: 1em;
+    margin-top: -5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: greenyellow;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 50px;
+}

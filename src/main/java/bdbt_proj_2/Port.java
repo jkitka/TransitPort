@@ -10,7 +10,7 @@ public class Port {
 	private int ID_portu;
 	private String Nazwa;
 	private int Powierzchnia;
-	private Date Data_zalozenia;
+	private String Data_zalozenia;
 	private String Osrodek_ratownictwa;
 	private int ID_adresu;
 
@@ -18,7 +18,7 @@ public class Port {
 
 	}
 
-	public Port(int ID_portu, String Nazwa, int Powierzchnia, Date Data_zalozenia,
+	public Port(int ID_portu, String Nazwa, int Powierzchnia, String Data_zalozenia,
 			String Osrodek_ratownictwa, int ID_adresu) {
 		super();
 		this.ID_portu = ID_portu;
@@ -55,11 +55,11 @@ public class Port {
 		Powierzchnia = powierzchnia;
 	}
 
-	public Date getData_zalozenia() {
+	public String getData_zalozenia() {
 		return Data_zalozenia;
 	}
 
-	public void setData_zalozenia(Date data_zalozenia) {
+	public void setData_zalozenia(String data_zalozenia) {
 		Data_zalozenia = data_zalozenia;
 	}
 

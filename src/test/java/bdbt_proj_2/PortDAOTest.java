@@ -37,17 +37,31 @@ class PortDAOTest {
 
 	@Test
 	void testSave() {
-		fail("Not yet implemented");
+		Port port = new Port(6, "Nowy port", 4040, "2020-05-25", "WOPRRR", 3);
+		dao.save(port);
 	}
 
 	@Test
 	void testGet() {
-		fail("Not yet implemented");
+		
+		int id_portu = 1;
+		Port port = dao.get(id_portu);
+		assertNotNull(port);
+		
 	}
 
 	@Test
 	void testUpdate() {
-		fail("Not yet implemented");
+	
+		Port port = new Port();
+		port.setID_adresu(22);
+		port.setNazwa("Port Szczecinn 3");
+		port.setPowierzchnia(4334);
+		port.setData_zalozenia("2019-11-11");
+		port.setOsrodek_ratownictwa("WOPR Szczecin");
+		port.setID_adresu(3);
+		
+		dao.update(port);
 	}
 
 	@Test
