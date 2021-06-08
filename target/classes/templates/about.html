@@ -1,38 +1,105 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang = "pl">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="hhtp://www.thymeleaf.org">
 
 
 <head>
-    <meta charset="UTF-8">
-    <title>Transit Port Modeler</title>
-    <link href="site-style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+<meta charset="UTF-8">
+<title>Transit Port Modeler</title>
+<link rel="shortcut icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+	rel="stylesheet">
 </head>
+<style type="text/css">
+body {
+	background-color: #FFF8E1;
+}
 
+html {
+	font-family: 'Lato', sans-serif;
+}
+
+a:link {
+	opacity: 100%;
+}
+
+a:hover {
+	opacity: 50%;
+}
+
+a:visited {
+	opacity: 100%;
+}
+
+a:active {
+	opacity: 30%;
+}
+
+nav {
+	width: 100%;
+	background-color: blanchedalmond;
+	display: inline-block;
+	font-size: larger;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav li {
+	display: inline;
+	margin-top: 20;
+}
+
+nav a {
+	text-decoration: none;
+	display: inline;
+	padding: 0 1em 0 1em;
+	margin: 0;
+	text-align: right;
+	color: black;
+}
+
+#login {
+	position: absolute;
+	right: 1em;
+	margin-top: -5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid green;
+	border-radius: 5px;
+	background-color: greenyellow;
+}
+
+h1 {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin: 50px;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
+	rel='stylesheet' type='text/css'>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Strona główna</a>
-            </li>
-            <li>
-                <a href="about.html">O nas</a>
-            </li>
-            <li>
-                <a href="contact.html">Kontakt</a>
-            </li>
-            <li>
-                <a id="login" href="login.html">Zaloguj się</a>
-            </li>
-        </ul>
-    </nav>
+	<nav>
+		<ul>
+			<li><a href="index.html">Strona główna</a></li>
+			<li><a href="table.html">Rezerwuj</a></li>
+			<li><a href="about.html">O nas</a></li>
+			<li><a href="contact.html">Kontakt</a></li>
+			<li><a id="login" href="login.html">Zaloguj się</a></li>
+		</ul>
+	</nav>
 
-    <h1>O nas</h1>
-    <p>Jesteśmy jednym z największych portów towarowych w Polsce. Zajmujemy się składowaniem, importem oraz eksportem towarów w dowolne miejsce na świecie.</p>
+	<h1>O nas</h1>
+	<p>Jesteśmy jednym z największych portów towarowych w Polsce.
+		Zajmujemy się składowaniem, importem oraz eksportem towarów w dowolne
+		miejsce na świecie.</p>
 </body>
 
-<footer>
-    Port Bazodanowy, 2021
-</footer>
+<footer> Port Bazodanowy, 2021 </footer>
 
 </html>

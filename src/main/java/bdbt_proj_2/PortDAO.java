@@ -66,6 +66,7 @@ public class PortDAO {
 
 	/* Delete */
 	public void delete(int id) {
-
+		String sql = "DELETE FROM PORTY WHERE id_portu = ?";
+		jdbcTemplate.update(sql,id);
 	}
 }

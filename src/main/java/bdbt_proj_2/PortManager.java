@@ -8,7 +8,7 @@ public class PortManager {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PortManager.class, args);
-
+		
 	}
 
 }

@@ -66,7 +66,8 @@ class PortDAOTest {
 
 	@Test
 	void testDelete() {
-		fail("Not yet implemented");
+		int id_portu = 45;
+		dao.delete(id_portu);
 	}
 
 }
