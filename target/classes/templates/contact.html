@@ -5,16 +5,15 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Transit Port Modeler</title>
+<title>Kontakt</title>
 <link rel="shortcut icon" href="icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
 	rel="stylesheet">
 </head>
 <style type="text/css">
-body{
-background-color: #FFF8E1;
+body {
+background-color: #FFF3E0;
 }
-
 html {
 	font-family: 'Lato', sans-serif;
 }
@@ -37,7 +36,7 @@ a:active {
 
 nav {
 	width: 100%;
-	background-color: blanchedalmond;
+	background-color:#FFCC80;
 	display: inline-block;
 	font-size: larger;
 	margin: 0px;
@@ -60,24 +59,25 @@ nav a {
 
 #login {
 	position: absolute;
+	font-weight: bold;
 	right: 1em;
-	margin-top: -5px;
+	margin-top: -30px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	border: 2px solid green;
+	border: 2px solid black;
 	border-radius: 5px;
-	background-color: greenyellow;
+	background-color: #FF7F00;
 }
 
 #container {
-	color: #CC6600;
+	color:black;
 	width: 1500;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #content {
-	color: #CC6600;
+	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	height: 620px;
@@ -125,7 +125,7 @@ h1 {
 }
 
 footer {
-	color: #CC6600;
+	color: black;
 	text-align: center;
 	margin: 50px;
 }
@@ -156,10 +156,10 @@ footer {
 	<nav>
 		<ul>
 			<li><a href="index.html">Strona główna</a></li>
-			<li><a href="table.html">Rezerwuj</a></li>
+			<li><a href="table.html">Dostępne porty</a></li>
 			<li><a href="about.html">O nas</a></li>
 			<li><a href="contact.html">Kontakt</a></li>
-			<li><a id="login" href="login.html">Zaloguj się</a></li>
+			<li><a href="login"><div id="login" th:text="${state}"></div></a></li>
 		</ul>
 	</nav>
 

@@ -3,6 +3,8 @@ package bdbt_proj_2;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,21 +20,46 @@ public class AppController {
 	private PortDAO dao;
 
 	@RequestMapping("/table.html")
-	public String viewHomePage(Model model) {
+	public String viewTablePageFor(Model model) {
 
-		List<Port> listPort = dao.list();
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUser = authentication.getName();
+		System.out.println(currentUser);
+		List<Port> listPort;
+		if (currentUser.equals("admin")) {
+			listPort = dao.list();
+		} else {
+			listPort = dao.listAsBasic();
+		}
+
 		model.addAttribute("listPort", listPort);
-		return "table";
+		return "table" + currentUser;
 	}
 
 	@RequestMapping("/")
 	public String vievHomePage(Model model) {
 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String role = authentication.getName();
+		if (role.equals("anonymousUser")) {
+			model.addAttribute("state", "Zaloguj siê");
+		} else {
+			model.addAttribute("state", "Wyloguj siê");
+		}
+
 		return "index";
 	}
-	
+
 	@RequestMapping("/about.html")
 	public String vievAboutPage(Model model) {
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String role = authentication.getName();
+		if (role.equals("anonymousUser")) {
+			model.addAttribute("state", "Zaloguj siê");
+		} else {
+			model.addAttribute("state", "Wyloguj siê");
+		}
 
 		return "about";
 	}
@@ -40,21 +67,31 @@ public class AppController {
 	@RequestMapping("/index.html")
 	public String vievMainPage(Model model) {
 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String role = authentication.getName();
+		if (role.equals("anonymousUser")) {
+			model.addAttribute("state", "Zaloguj siê");
+		} else {
+			model.addAttribute("state", "Wyloguj siê");
+		}
+
 		return "index";
-	}
-
-	@RequestMapping("/login.html")
-	public String vievLoginPage(Model model) {
-
-		return "login";
 	}
 
 	@RequestMapping("/contact.html")
 	public String vievContactPage(Model model) {
 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String role = authentication.getName();
+		if (role.equals("anonymousUser")) {
+			model.addAttribute("state", "Zaloguj siê");
+		} else {
+			model.addAttribute("state", "Wyloguj siê");
+		}
+
 		return "contact";
 	}
-	
+
 	@RequestMapping("/new")
 	public String showNewForm(Model model) {
 

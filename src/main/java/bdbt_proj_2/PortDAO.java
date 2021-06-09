@@ -30,6 +30,16 @@ public class PortDAO {
 		System.out.println(listPort);
 		return listPort;
 	}
+	
+	public List<Port> listAsBasic() {
+
+		String sql = "SELECT id_portu,nazwa,powierzchnia,data_zalozenia FROM PORTY";
+
+		List<Port> listPort = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Port.class));
+		
+		System.out.println(listPort);
+		return listPort;
+	}
 
 	/* Insert */
 	public void save(Port port) {

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="hhtp://www.thymeleaf.org">
+
+
+<head>
+<meta charset="UTF-8">
+<title>Dostepne porty</title>
+<link rel="shortcut icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+	rel="stylesheet">
+</head>
+<style type="text/css">
+body {
+	background-color: #FFF3E0;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+}
+
+a:link {
+	opacity: 100%;
+}
+
+a:hover {
+	opacity: 50%;
+}
+
+a:visited {
+	opacity: 100%;
+}
+
+a:active {
+	opacity: 30%;
+}
+
+nav {
+	width: 100%;
+	background-color: #FFCC80;
+	display: inline-block;
+	font-size: larger;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav li {
+	display: inline;
+	margin-top: 20;
+}
+
+nav a {
+	text-decoration: none;
+	display: inline;
+	padding: 0 1em 0 1em;
+	margin: 0;
+	text-align: right;
+	color: black;
+}
+
+#login {
+	position: absolute;
+	font-weight: bold;
+	right: 1em;
+	margin-top: -30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #FF7F00;
+}
+
+#add {
+	margin-left: 330px;
+	color: black;
+	position: absolute;
+	font-weight: bold;
+	margin-top: -5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #FF7F00;
+}
+
+#edit {
+	color: black;
+	position: absolute;
+	font-weight: bold;
+	margin-top: -5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #FF7F00;
+}
+
+#delete {
+	color: black;
+	font-weight: bold;
+	margin-top: -5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #FF7F00;
+}
+
+h1 {
+	text-align: center;
+	font-size: 36px;
+}
+
+footer {
+	text-align: center;
+	margin: 50px;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
+	rel='stylesheet' type='text/css'>
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Strona główna</a></li>
+			<li><a href="table.html">Dostępne porty</a></li>
+			<li><a href="about.html">O nas</a></li>
+			<li><a href="contact.html">Kontakt</a></li>
+			<li><a href="logout"><div id="login">Wyloguj się</div></a>
+
+</div></a></li>
+		</ul>
+	</nav>
+	
+	<div align="center">
+		<br />
+		<!-- Page Header  -->
+		<h1>SPIS WSZYSTKICH NASZYCH DOSTĘPNYCH PORTÓW</h1>
+		<br />
+
+
+
+		<!-- Adding new record (entry to a new page)  -->
+		<a id="add" href="/new">DODAJ NOWY PORT</a>
+
+		<!-- End line/ new line  -->
+		<br /> <br />
+
+		<!-- Table with records  -->
+		<table bgcolor=#FFE0B2 border="1" cellpadding="10">
+			<!-- Table header -->
+			<thead>
+				<tr>
+					<th>Id portu</th>
+					<th>Nazwa</th>
+					<th>Powierzchnia</th>
+					<th>Data Zalozenia</th>
+					<th>Osrodek ratownictwa</th>
+					<th>ID adresu</th>
+					<th width=100px>Akcje</th>
+
+				</tr>
+			</thead>
+
+			<!-- Table body-->
+			<tbody>
+				<tr th:each="port:${listPort}">
+					<td th:text="${port.ID_portu}">Id portu</td>
+					<td th:text="${port.Nazwa}">Nazwa</td>
+					<td th:text="${port.Powierzchnia}">Powierzchnia</td>
+					<td th:text="${port.Data_zalozenia}">Data Zalozenia</td>
+					<td th:text="${port.Osrodek_ratownictwa}">Osrodek ratownictwa</td>
+					<td th:text="${port.ID_adresu}">ID adresu</td>
+
+					<td><a id="edit" th:href="@{'/edit/' + ${port.ID_portu}}">Edytuj</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a id="delete" th:href="@{'/delete/' + ${port.ID_portu}}">Usuń</a>
+					</td>
+
+
+				</tr>
+
+			</tbody>
+
+
+
+		</table>
+
+	</div>
+
+	<footer align="center"> Port Bazodanowy, 2021 </footer>
+</body>
+</html>

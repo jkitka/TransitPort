@@ -5,15 +5,17 @@
 
 <head>
 <meta charset="UTF-8">
-<title>O nas</title>
+<title>Dostępne porty</title>
 <link rel="shortcut icon" href="icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
 	rel="stylesheet">
 </head>
+
 <style type="text/css">
 body {
-background-color: #FFF3E0;
+	background-color: #FFF3E0;
 }
+
 html {
 	font-family: 'Lato', sans-serif;
 }
@@ -36,7 +38,7 @@ a:active {
 
 nav {
 	width: 100%;
-	background-color:#FFCC80;
+	background-color: #FFCC80;
 	display: inline-block;
 	font-size: larger;
 	margin: 0px;
@@ -69,9 +71,15 @@ nav a {
 	background-color: #FF7F00;
 }
 
-
 h1 {
+	font-weight: bold;
 	text-align: center;
+	font-size: 36px;
+}
+
+#head2 {
+	text-align: center;
+	font-size: 20px;
 }
 
 footer {
@@ -84,23 +92,65 @@ footer {
 <link
 	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
 	rel='stylesheet' type='text/css'>
+
+
 <body>
+
 	<nav>
 		<ul>
 			<li><a href="index.html">Strona główna</a></li>
 			<li><a href="table.html">Dostępne porty</a></li>
 			<li><a href="about.html">O nas</a></li>
 			<li><a href="contact.html">Kontakt</a></li>
-			<li><a href="login"><div id="login" th:text="${state}"></div></a></li>
+			<li><a href="login"><div id="login">Zaloguj się</div></a>
 		</ul>
 	</nav>
+	<div align="center">
+		<br />
+		<!-- Page Header  -->
+		<h1>SPIS WSZYSTKICH NASZYCH DOSTĘPNYCH PORTÓW</h1>
 
-	<h1>O nas</h1>
-	<p>Jesteśmy jednym z największych portów towarowych w Polsce.
-		Zajmujemy się składowaniem, importem oraz eksportem towarów w dowolne
-		miejsce na świecie.</p>
+
+		<!-- End line/ new line  -->
+		<br />
+		<div id="head2">Oto lista wszystkich portów dostępnych w naszym
+			systemie. W celu dokonania rezerwacji, niezbędne jest ówczesne
+			zalogowanie się do systemu.</div>
+		<br /> <br />
+
+		<!-- Table with records  -->
+		<table bgcolor=#FFE0B2 border="1" cellpadding="10">
+			<!-- Table header -->
+			<thead>
+				<tr>
+					<th>Id portu</th>
+					<th>Nazwa</th>
+					<th>Powierzchnia</th>
+					<th>Data Zalozenia</th>
+
+				</tr>
+			</thead>
+
+			<!-- Table body-->
+			<tbody>
+				<tr th:each="port:${listPort}">
+					<td th:text="${port.ID_portu}">Id portu</td>
+					<td th:text="${port.Nazwa}">Nazwa</td>
+					<td th:text="${port.Powierzchnia}">Powierzchnia</td>
+					<td th:text="${port.Data_zalozenia}">Data Zalozenia</td>
+
+
+
+				</tr>
+
+			</tbody>
+
+
+
+		</table>
+
+	</div>
+
+	<footer align="center"> Port Bazodanowy, 2021 </footer>
 </body>
-
-<footer> Port Bazodanowy, 2021 </footer>
-
 </html>

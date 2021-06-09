@@ -5,14 +5,34 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Edit Port</title>
-
+<title>Edycja Portu</title>
+<link rel="shortcut icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+	rel="stylesheet">
 </head>
+
+<style type="text/css">
+body {
+	background-color: #FFF3E0;
+}
+
+footer {
+	text-align: center;
+	margin: 50px;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
+	rel='stylesheet' type='text/css'>
+
+
 <body>
 
 	<div align="center">
 		<!-- Page Header  -->
-		<h1>Edit port</h1>
+		<h1>Edytuj Port</h1>
 
 		<!--  End line / new line  -->
 		<br />
@@ -21,7 +41,7 @@
 			method="post">
 
 			<!-- Table with records  -->
-			<table border="1" cellpadding="10">
+			<table bgcolor=#FFE0B2 border="1" cellpadding="10">
 
 				<!-- Rows -->
 				<tr>
@@ -31,27 +51,27 @@
 				</tr>
 
 				<tr>
-					<td>Nazwa:</td>
+					<td font-weight: bold>Nazwa:</td>
 					<td><input type="text" th:field="*{Nazwa}"></td>
 				</tr>
 
 				<tr>
-					<td>Powierzchnia:</td>
+					<td font-weight: bold>Powierzchnia:</td>
 					<td><input type="text" th:field="*{Powierzchnia}"></td>
 				</tr>
 
 				<tr>
-					<td>Data zalozenia:</td>
+					<td font-weight: bold>Data zalozenia:</td>
 					<td><input type="text" th:field="*{Data_zalozenia}"></td>
 				</tr>
 
 				<tr>
-					<td>Osrodek ratownictwa</td>
+					<td font-weight: bold>Osrodek ratownictwa</td>
 					<td><input type="text" th:field="*{Osrodek_ratownictwa}"></td>
 				</tr>
 
 				<tr>
-					<td>ID adresu:</td>
+					<td font-weight: bold>ID adresu:</td>
 					<td><input type="text" th:field="*{ID_adresu}"></td>
 				</tr>
 
@@ -61,12 +81,13 @@
 
 				<!-- Button Save -->
 				<tr>
-					<td colspan="2"><button type="submit">Save</button></td>
+					<td colspan="2"><button type="submit">Zapisz</button></td>
 				</tr>
 
 
 			</table>
 		</form>
 	</div>
+	<footer align="center"> Port Bazodanowy, 2021 </footer>
 </body>
 </html>
