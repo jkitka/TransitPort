@@ -40,8 +40,8 @@ public class AppController {
 	public String vievHomePage(Model model) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String role = authentication.getName();
-		if (role.equals("anonymousUser")) {
+		String currentUser = authentication.getName();
+		if (currentUser.equals("anonymousUser")) {
 			model.addAttribute("state", "Zaloguj siê");
 		} else {
 			model.addAttribute("state", "Wyloguj siê");
@@ -54,8 +54,8 @@ public class AppController {
 	public String vievAboutPage(Model model) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String role = authentication.getName();
-		if (role.equals("anonymousUser")) {
+		String currentUser = authentication.getName();
+		if (currentUser.equals("anonymousUser")) {
 			model.addAttribute("state", "Zaloguj siê");
 		} else {
 			model.addAttribute("state", "Wyloguj siê");
@@ -68,8 +68,8 @@ public class AppController {
 	public String vievMainPage(Model model) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String role = authentication.getName();
-		if (role.equals("anonymousUser")) {
+		String currentUser = authentication.getName();
+		if (currentUser.equals("anonymousUser")) {
 			model.addAttribute("state", "Zaloguj siê");
 		} else {
 			model.addAttribute("state", "Wyloguj siê");
@@ -82,8 +82,8 @@ public class AppController {
 	public String vievContactPage(Model model) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String role = authentication.getName();
-		if (role.equals("anonymousUser")) {
+		String currentUser = authentication.getName();
+		if (currentUser.equals("anonymousUser")) {
 			model.addAttribute("state", "Zaloguj siê");
 		} else {
 			model.addAttribute("state", "Wyloguj siê");
