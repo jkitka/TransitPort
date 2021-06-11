@@ -12,7 +12,7 @@
 </head>
 <style type="text/css">
 body {
-background-color: #FFF3E0;
+	background-color: #FFF3E0;
 }
 html {
 	font-family: 'Lato', sans-serif;
@@ -69,6 +69,32 @@ nav a {
 	background-color: #FF7F00;
 }
 
+#btn {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgb(168, 226, 134);
+	border: 1px solid black;
+	text-decoration: none;
+}
+
+p {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+#panorama {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+
+.section {
+	text-align: center;
+}
 
 h1 {
 	text-align: center;
@@ -84,21 +110,39 @@ footer {
 <link
 	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
 	rel='stylesheet' type='text/css'>
+<nav>
+	<ul>
+		<li><a href="index.html">Strona główna</a></li>
+		<li><a href="table.html">Dostępne porty</a></li>
+		<li><a href="about.html">O nas</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+		<li><a href="login">
+				<div id="login" th:text="${state}"></div>
+			</a></li>
+	</ul>
+</nav>
+
 <body>
-	<nav>
-		<ul>
-			<li><a href="index.html">Strona główna</a></li>
-			<li><a href="table.html">Dostępne porty</a></li>
-			<li><a href="about.html">O nas</a></li>
-			<li><a href="contact.html">Kontakt</a></li>
-			<li><a href="login"><div id="login" th:text="${state}"></div></a></li>
-		</ul>
-	</nav>
 
 	<h1>O nas</h1>
-	<p>Jesteśmy jednym z największych portów towarowych w Polsce.
-		Zajmujemy się składowaniem, importem oraz eksportem towarów w dowolne
-		miejsce na świecie.</p>
+	<div class="section">
+		<img id="panorama" src="https://static.300gospodarka.pl/media/2019/03/KJK1701240962-e1553012299221.jpg"
+			alt="Zdjecie portu">
+		<p>Jesteśmy jednym z największych portów towarowych w Polsce.
+			Zajmujemy się składowaniem, importem oraz eksportem towarów w dowolne
+			miejsce na świecie.</p>
+		<p>Oferujemy kompleksowe usługi tranzytowe oraz magazynowe dla towarów o wszelkich gabarytach, zarówno dla
+			klientów komercyjnych jak i indywidualnych.</p>
+		<a id="btn" href="">Zamów usługę</a> <!-- nwm jaki dać link -->
+	</div>
+
+	<br><br><br>
+
+	<div class="section" <p><b>Z nami możesz zrealizować każde zlecenie - nasi fachowcy pozwolą poczuć, że Twoje towary
+			są z nami bezpieczne.</b></p>
+		<img src="https://st.depositphotos.com/2249091/4158/i/600/depositphotos_41588249-stock-photo-factory-worker-in-warehouse.jpg"
+			alt="Zdjecie fachowca">
+	</div>
 </body>
 
 <footer> Port Bazodanowy, 2021 </footer>

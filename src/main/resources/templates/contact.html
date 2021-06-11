@@ -71,53 +71,49 @@ nav a {
 
 #container {
 	color:black;
-	width: 1500;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin: 0 auto; */
 }
 
 #content {
+	display: block;
+	position: relative;
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	height: 620px;
-	width: 1800px;
 }
 
 #middleContent {
-	width: 2250;
 	float: center;
 }
 
 #contact {
 	margin-top: 50px;
-	margin-left: 915px;
-	float: center;
+	text-align: center;
 	font-size: 47px;
 	font-weight: bold;
-	float: center;
 }
 
 #contactText {
 	margin-top: 30px;
-	margin-left: 675px;
-	float: center;
+	text-align: center;
 	font-size: 16px;
 }
 
 #content {
 	font-size: 23px;
 	margin-top: 17px;
-	margin-left: 150px;
-	margin-top: 17px;
 }
 
-#img {
-	
+img {
+	position: static;
+	display: block;
+	margin: 0 auto;
 }
 
 #des {
-	margin-left: 150px;
+	text-align: center;
+	/* height: fit-content; */
 }
 
 h1 {
@@ -131,20 +127,19 @@ footer {
 }
 
 .contactRow {
-	min-width: 50px;
-	height: 20px;
-	padding: 10px;
-	margin-top: 20px;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	padding-left: 35%;
 }
 
 .contactPhoto {
-	float: ;
 }
 
 .contactText {
 	padding-left:22px;
-         float: left;
-	
+    float: left;
+	font-size: large;
 }
 </style>
 
@@ -170,36 +165,35 @@ footer {
 			informacje pozwalające Ci na uzyskanie kontaktu z naszą firmą</div>
 
 		<div id="content">
+			<img src="https://www.liderlamp.pl/ImgGalery/Img4/Clanky/aktuality-home/kontakt_800x300px.jpg" alt="ilustracja">
 			<div id="middleContent">
 				<div id="img">
 					<img src="">
 				</div>
 				<div id="des">
 					<h2>Dane kontaktowe: </h2>
-
-
 					<br>
-					<div claas="contactRow">
+					<div class="contactRow">
 						<div class="contactPhoto">
 							<img src="">
 						</div>
-						<div class="contactText">Gdańsk, ul.Złota 31 11-232</div>
+						<div class="contactText"><b>Adres:</b> Gdańsk, ul.Złota 31 11-232</div>
 					</div>
 
 					<br> <br>
-					<div claas="contactRow">
+					<div class="contactRow">
 						<div class="contactPhoto">
 							<img src="">
 						</div>
-						<div class="contactText">222-345-126</div>
+						<div class="contactText"><b>Nr telefonu:</b> 222-345-126</div>
 					</div>
 
 					<br> <br>
-					<div claas="contactRow">
+					<div class="contactRow">
 						<div class="contactPhoto">
 							<img src="">
 						</div>
-						<div class="contactText">Mail: najlepszyport@tylkolegia.com</div>
+						<div class="contactText"><b>Adres e-mail:</b> najlepszyport@tylkolegia.com</div>
 					</div>
 
 				</div>
