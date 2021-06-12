@@ -62,6 +62,16 @@ public class PortDAO {
 		
 		return port;
 	}
+	
+	public Port getID(int id_portu) {
+		
+		Object[] args = {id_portu};
+		String sql = "SELECT id_portu FROM PORTY WHERE id_portu = " + args[0];
+		Port port = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Port.class));
+		
+		
+		return port;
+	}
 
 	/* Update */
 	public void update(Port port) {

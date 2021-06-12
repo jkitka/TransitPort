@@ -115,6 +115,7 @@ public class AppController {
 
 		return mav;
 	}
+	
 
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 
@@ -129,5 +130,22 @@ public class AppController {
 		return "redirect:/table.html";
 
 	}
+	
 
+	
+	@RequestMapping("/reserve")
+	public String showReservation(Model model) {
+		
+		Reservation reserve = new Reservation();
+		model.addAttribute("reserve", reserve);
+		return "reserve";
+	}
+	
+	@RequestMapping(value = "/reserve", method = RequestMethod.POST)
+
+	public String reserve(@ModelAttribute("port") Port port) {
+	
+		return "redirect:/table.html";
+	}
+	
 }

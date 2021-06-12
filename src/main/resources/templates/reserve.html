@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="hhtp://www.thymeleaf.org">
+
+
+<head>
+<meta charset="UTF-8">
+<title>Edycja Portu</title>
+<link rel="shortcut icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+	rel="stylesheet">
+</head>
+
+<style type="text/css">
+body {
+	background-color: #FFF3E0;
+}
+
+footer {
+	text-align: center;
+	margin: 50px;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext'
+	rel='stylesheet' type='text/css'>
+
+
+<body>
+
+	<div align="center">
+		<!-- Page Header  -->
+		<h1>Zarezerwuj usługę</h1>
+
+		<!--  End line / new line  -->
+		<br />
+
+
+		<form action="#" th:action="@{/reserve}" th:object="${reserve}" method="post">
+
+
+
+			<!-- Table with records  -->
+			<table bgcolor=#FFE0B2 border="1" cellpadding="10">
+
+				<!-- Rows -->
+
+
+				<tr>
+					<td font-weight: bold>Data początku rezerwacji:</td>
+					<td><input type="text" th:field="*{reservation_start}"></td>
+				</tr>
+
+				<tr>
+					<td font-weight: bold>Data końca rezerwacji:</td>
+					<td><input type="text" th:field="*{reservation_end}"></td>
+				</tr>
+
+				<tr>
+					<td>Ilosc kontenerow do rezerwacji:</td>
+					<td><input type="text" th:field="*{number_of_containers}"></td>
+				</tr>
+
+				<!-- Button Save -->
+				<tr>
+					<td colspan="2"><button type="submit">Zapisz</button></td>
+				</tr>
+
+
+			</table>
+		</form>
+	</div>
+	<footer align="center"> Port Bazodanowy, 2021 </footer>
+</body>
+</html>
